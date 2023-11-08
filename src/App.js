@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { fetchUsers } from "./store/userReducer";
+import {
+  incrimentCreater,
+  decrimentCreater,
+  asyncincrimentCreater,
+  asyncdecrimentCreater,
+} from "./store/countReducer";
+import { useDispatch, useSelector } from "react-redux";
 function App() {
+  const dispatch = useDispatch();
+  const count = useSelector((state) => state.counts.count);
+  const user = useSelector((state) => state.user.users);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>{count}</div>
+      <button
+        onClick={() => {
+          dispatch(asyncincrimentCreater());
+        }}
+      >
+        INCRIMENT
+      </button>
+      <button
+        onClick={() => {
+          dispatch(asyncdecrimentCreater());
+        }}
+      >
+        DECRIMENT
+      </button>
+      <button onClick={() => dispatch(fetchUsers())}>FETCH</button>
+      {user.map((users) => (
+        <li key={users.id}>{users.name}</li>
+      ))}
     </div>
   );
 }
