@@ -33,6 +33,8 @@ function App() {
         <li key={users.id}>{users.name}</li>
       ))}
       <div>Info</div>
+      <div>SomeNewDataHere</div>
+      <div>SomeNewDataHere</div>
     </div>
   );
 }
