@@ -34,8 +34,6 @@ function App() {
       ))}
       <div>Info</div>
       <div>Data some added</div>
-      <div>SomeNewDataHere</div>
-      <div>SomeNewDataHere</div>
     </div>
   );
 }
