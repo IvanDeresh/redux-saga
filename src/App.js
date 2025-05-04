@@ -37,6 +37,7 @@ function App() {
       <button>A</button>
       <div>Info</div>
       <div>Data some added</div>
+      <input />
     </div>
   );
 }
