@@ -34,6 +34,7 @@ function App() {
       ))}
       <div>Info</div>
       <div>Data some added</div>
+      <input />
     </div>
   );
 }
