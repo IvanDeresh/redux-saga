@@ -35,6 +35,7 @@ function App() {
       <div>Info</div>
       <div>SomeNewDataHere</div>
       <div>SomeNewDataHere</div>
+      <button>A</button>
     </div>
   );
 }
