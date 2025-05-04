@@ -32,6 +32,7 @@ function App() {
       {user.map((users) => (
         <li key={users.id}>{users.name}</li>
       ))}
+      <div>Info</div>
     </div>
   );
 }
